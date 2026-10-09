@@ -12,7 +12,7 @@ public class ObserverImpl2 implements Observer {
         for (int i=10; i<history.size(); i++) {
             sum+= history.get(i);
         }
-        System.out.println("Moyenne: " + (sum / (history.size() - 10)));
+        System.out.println("Moyenne: " + (sum / (history.size())));
     }
 
 }
