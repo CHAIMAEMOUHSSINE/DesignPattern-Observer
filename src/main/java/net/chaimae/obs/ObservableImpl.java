@@ -24,12 +24,16 @@ public class ObservableImpl implements Observable {
     @Override
     public void notifyObservers() {
         for (Observer o : observers) {
-            o.update(state);
+            o.update(this);
         }
     }
 
     public void setState(int newState) {
         this.state = newState;
         notifyObservers();
+    }
+
+    public double getState() {
+        return (double) state;
     }
 }
