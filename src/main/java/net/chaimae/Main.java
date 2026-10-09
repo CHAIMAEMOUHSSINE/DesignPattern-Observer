@@ -3,6 +3,8 @@ package net.chaimae;
 
 import net.chaimae.obs.*;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         ObservableImpl observable = new ObservableImpl();
@@ -38,5 +40,13 @@ public class Main {
         observable.setState(80);
         observable.unsubscribe(o1);
         observable.setState(100);
+
+
+        Button button =new Button("ok");
+        button.addActionListener(e -> {
+            System.out.println(e.getSource());
+
+        });
+
 
     }}
